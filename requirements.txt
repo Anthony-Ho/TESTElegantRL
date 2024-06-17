@@ -7,7 +7,7 @@ numpy
 # plot/simulation
 matplotlib
 gymnasium
-gym==0.25.2
+gym
 gym[Box2D]
 
 # profiling
