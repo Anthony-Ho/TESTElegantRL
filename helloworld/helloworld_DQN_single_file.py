@@ -1,7 +1,7 @@
 import os
 import time
 from copy import deepcopy
-import gym
+import gymnasium as gym
 import numpy as np
 import torch
 import torch.nn as nn

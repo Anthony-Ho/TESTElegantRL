@@ -114,7 +114,7 @@ def build_env(env_class=None, env_args: dict = None, gpu_id: int = -1):
         num_envs = env_args['num_envs']
         env = VecEnv(env_class=env_class, env_args=env_args, num_envs=num_envs, gpu_id=gpu_id)
     elif env_class.__module__ == 'gym.envs.registration':
-        import gym
+        import gymnasium as gym
         assert '0.18.0' <= gym.__version__ <= '0.25.2'  # pip3 install gym==0.24.0
         gym.logger.set_level(40)  # Block warning
         env = env_class(id=env_args['env_name'])
@@ -154,7 +154,7 @@ def get_gym_env_args(env, if_print: bool) -> dict:
         'if_discrete': if_discrete, # [bool] action space is discrete or continuous
     }
     """
-    import gym
+    import gymnasium as gym
 
     if_gym_standard_env = {'unwrapped', 'observation_space', 'action_space', 'spec'}.issubset(dir(env))
 
