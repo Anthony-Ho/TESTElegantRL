@@ -7,8 +7,7 @@ numpy
 # plot/simulation
 matplotlib
 gymnasium
-gym
-gym[Box2D]
+gymnasium[Box2D]
 
 # profiling
 wandb
